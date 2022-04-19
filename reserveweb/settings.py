@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'place',
     'content',
     'reserve',
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -138,19 +137,21 @@ STATICFILES_DIRS = [
 ]
 
 # whitelist for django-cors-headers
-CORS_ORIGIN_WHITELIST = (
-    '127.0.0.1:8080',
-    'localhost:8080',
-
-    '127.0.0.1:8081',
-    'localhost:8081',
-
-    '127.0.0.1:8000',
-    'localhost:8000',
-)
+CORS_ORIGIN_ALLOW_ALL = True
 
 # allow cookie in whitelist
-CORS_ALLOW-CREDENTIALS = True
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+    'VIEW',
+)
+CORS_ALLOW_HEADERS = ('*')
 
 # 生产环境用 3
 # STATIC_URL = '/static/'

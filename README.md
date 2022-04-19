@@ -14,7 +14,7 @@
 - vue前端
     - web/ 前端项目文件夹
         - src/ vue源代码文件夹
-        - dist/ webpack打包后的输出文件夹
+        - dist/ webpack打包后的输出文件夹（git ignored）
             - assets/ 资源文件夹
             - common/ 公共js函数文件夹
             - components/ vue组件文件夹
@@ -41,6 +41,7 @@ DATABASES = {
     }
 }
 ```
+初始账号有高级管理员、root，密码均为123456。
 
 # 3、项目开发和运行
 
@@ -72,6 +73,7 @@ python manage.py runserver
 
 
 ## 3.4、开发
+* 在云主机部署需要修改config.js中的URL为云主机IP
 * 主要修改web/src下的文件，修改完后，在web目录下运行`npm run build`进行打包生成dist文件夹  
 * 开发vue前端，则运行`npm run serve`，它不与后端交互
 
